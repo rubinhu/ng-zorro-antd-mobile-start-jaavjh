@@ -1,0 +1,134 @@
+<div class="flex-container">
+  <div className="sub-title">Basic</div>
+  <Flex>
+    <FlexItem>
+      <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+    </FlexItem>
+    <FlexItem>
+      <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+    </FlexItem>
+  </Flex>
+  <br />
+  <Flex>
+    <FlexItem>
+      <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+    </FlexItem>
+    <FlexItem>
+      <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+    </FlexItem>
+    <FlexItem>
+      <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+    </FlexItem>
+  </Flex>
+  <br />
+  <Flex>
+    <FlexItem>
+      <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+    </FlexItem>
+    <FlexItem>
+      <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+    </FlexItem>
+    <FlexItem>
+      <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+    </FlexItem>
+    <FlexItem>
+      <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+    </FlexItem>
+  </Flex>
+  <br />
+  <div className="sub-title">Wrap</div>
+  <Flex [wrap]="'wrap'">
+    <div class="placeholder inline">Block</div>
+    <div class="placeholder inline">Block</div>
+    <div class="placeholder inline">Block</div>
+    <div class="placeholder inline">Block</div>
+    <div class="placeholder inline">Block</div>
+    <div class="placeholder inline">Block</div>
+    <div class="placeholder inline">Block</div>
+  </Flex>
+  <div className="sub-title">Align</div>
+  <Flex [justify]="'center'">
+    <div class="placeholder inline">Block Align center</div>
+    <div class="placeholder inline">Block</div>
+    <div class="placeholder inline">Block</div>
+  </Flex>
+  <br />
+  <Flex [justify]="'end'">
+    <div class="placeholder inline">Block end</div>
+    <div class="placeholder inline">Block</div>
+    <div class="placeholder inline">Block</div>
+  </Flex>
+  <br />
+  <Flex [justify]="'between'">
+    <div class="placeholder inline">Block between</div>
+    <div class="placeholder inline">Block</div>
+    <div class="placeholder inline">Block</div>
+    <div class="placeholder inline">Block</div>
+  </Flex>
+  <br />
+  <Flex [align]="'start'">
+    <div class="placeholder inline">Block start</div>
+    <div class="placeholder inline small">Block</div>
+    <div class="placeholder inline">Block</div>
+  </Flex>
+  <br />
+  <Flex [align]="'end'">
+    <div class="placeholder inline">Block end</div>
+    <div class="placeholder inline small">Block</div>
+    <div class="placeholder inline">Block</div>
+  </Flex>
+  <br />
+  <Flex [align]="'baseline'">
+    <div class="placeholder inline">Block baseline</div>
+    <div class="placeholder inline small">Block</div>
+    <div class="placeholder inline">Block</div>
+  </Flex>
+</div>
+
+<ng-template #placeHolder>
+  <div class="placeholder">Block</div>
+</ng-template>
+
+<br /> <br />
+<div className="sub-title">WhiteSpace上下留白</div>
+<div style="padding: 15px 0; background-color:green">
+  <WhiteSpace [size]="'xs'"></WhiteSpace>
+  <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+
+  <WhiteSpace [size]="'sm'"></WhiteSpace>
+  <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+
+  <WhiteSpace></WhiteSpace>
+  <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+
+  <WhiteSpace [size]="'lg'"></WhiteSpace>
+  <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+
+  <WhiteSpace [size]="'xl'"></WhiteSpace>
+  <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+
+  <ng-template #placeHolder>
+    <div class="placeholder">Block</div>
+  </ng-template>
+</div>
+<br /> <br />
+<div className="sub-title">WingBlank两翼留白</div>
+<div style="padding: 15px 0; background-color:green">
+  <WingBlank>
+    <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+  </WingBlank>
+
+  <WhiteSpace [size]="'lg'"></WhiteSpace>
+  <WingBlank [size]="'md'">
+    <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+  </WingBlank>
+
+  <WhiteSpace [size]="'lg'"></WhiteSpace>
+  <WingBlank [size]="'sm'">
+    <ng-template [ngTemplateOutlet]="placeHolder"></ng-template>
+  </WingBlank>
+
+  <ng-template #placeHolder>
+    <div class="placeholder">Block</div>
+  </ng-template>
+</div>
